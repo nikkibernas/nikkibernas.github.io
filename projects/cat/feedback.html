@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header">
+                <img src="images/logo.jpg" alt="logo"
+                onmouseenter="this.src='images/logo-mad.jpg' "
+                onmouseout="this.src='images/logo.jpg'" id="catlogo">
+                <nav>
+                    <a class="navA" href="home.html">
+                        Home
+                    </a>
+                    <a class="navA" href="learn.html">
+                        Learn
+                    </a>
+                    <a class="navA" href="relax.html">
+                        Relax
+                    </a>
+                    <a class="navA" href="#">
+                        Feedback
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div id="feedback-container">
+                <h1>I'd Love to Hear Your Feedback!</h1>
+                <p>Your input helps me make Cat care with Kitty-Kun the best it can be. Please take a few minutes to share your thoughts.</p>
+
+                <form id="feedback-form">
+                    <fieldset>
+                        <legend>How would you rate your overall experience?</legend>
+                        <div class="rating">
+                            <input type="radio" name="rating" id="rating-5" value="5">
+                            <label for="rating-5">&#9733;</label>
+                            <input type="radio" name="rating" id="rating-4" value="4">
+                            <label for="rating-4">&#9733;</label>
+                            <input type="radio" name="rating" id="rating-3" value="3">
+                            <label for="rating-3">&#9733;</label>
+                            <input type="radio" name="rating" id="rating-2" value="2">
+                            <label for="rating-2">&#9733;</label>
+                            <input type="radio" name="rating" id="rating-1" value="1">
+                            <label for="rating-1">&#9733;</label>
+                        </div>  
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>What did you like most about our website?</legend>
+                        <textarea id="feedback-likes" placeholder="Enter your feedback here..."></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>How can I improve the site?</legend>
+                        <textarea id="feedback-improvements" placeholder="Enter your feedback here..."></textarea>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Would you recommend my site to a friend?</legend>
+                        <label for="recommend-yes">Yes</label>
+                        <input type="radio" name="recommend" id="recommend-yes" value="yes"> 
+                        <label for="recommend-no">No</label>
+                        <input type="radio" name="recommend" id="recommend-no" value="no">  
+                    </fieldset>
+
+                    <button type="submit" id="submit-feedback">Submit Feedback</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Nichole Bernas 300389212</p>
+            ChatGPT. (n.d.). [Images generated using ChatGPT]. OpenAI.
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <script src="scripts/home.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="startSlideshow()">
+    <div class="wrapper">
+        <header>
+            <div class="header">
+                <img src="images/logo.jpg" alt="logo"
+                onmouseenter="this.src='images/logo-mad.jpg' "
+                onmouseout="this.src='images/logo.jpg'" id="catlogo">
+                <nav>
+                    <a class="navA" href="#">
+                        Home
+                    </a>
+                    <a class="navA" href="learn.html">
+                        Learn
+                    </a>
+                    <a class="navA" href="relax.html">
+                        Relax
+                    </a>
+                    <a class="navA" href="feedback.html">
+                        Feedback
+                    </a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section id="hero">
+                <div class="hero-content">
+                    <h1>Welcome to:<br>Cat care with Kitty-Kun!</h1>
+                    <p>All of your cat-care needs, available in one place</p>
+                    <a href="learn.html" class="hero-btn">Get Started</a>
+                </div>
+            </section>
+
+            <section id="highlights">
+                <h2 class="section-title">You have made it to the right place if you:</h2>
+                <div class="highlights-grid"> 
+                    <div class="feature">
+                        <h3>Own a kitty cat or are thinking of adopting</h3>
+                    </div>
+                    <div class="feature">
+                        <h3>Want to understand cat behaviors</h3>
+                    </div>
+                    <div class="feature">
+                        <h3>Seek to achieve a loving bond with your fur friend</h3>
+                    </div>
+                    <div class="feature">
+                        <h3>Are striving to provide a wonderful pet-life</h3>
+                    </div>
+                    <div class="feature">
+                        <h3>Hope your cat will love you back</h3>
+                    </div>
+                    <div class="feature">
+                        <h3>Interested in playful activities for your cat</h3>
+                    </div>
+                    <div class="feature">
+                        <h3>Need guidance on health care and veterinary visits</h3>
+                    </div>
+                    <div class="feature">
+                        <h3>Looking for tips on traveling with your cat</h3>
+                    </div>
+                </div>
+            </section>
+            
+
+            <section id="carousel">
+                <h2 class="section-title">Adorable Cat Moments</h2>
+                <div class="carousel-container">
+                    <div class="carousel-slide">
+                        <img src="images/cat-slideshow/roo1.jpg" id="slideshow" alt="Playful Cat">
+                    </div>
+                    <!-- <div class="carousel-slide">
+                        <img src="images/carousel/roo2.jpg" alt="Nichole's Cat">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/carousel/roo3.jpg" alt="Nichole's Cat">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/carousel/roo4.jpg" alt="Nichole's Cat">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/carousel/roo5.jpg" alt="Nichole's Cat">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/carousel/roo6.jpg" alt="Nichole's Cat">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/carousel/roo7.jpg" alt="Nichole's Cat">
+                    </div> -->
+                    <!-- <button class="prev-btn">&#10094;</button> 
+                    <button class="next-btn">&#10095;</button>  -->
+                </div>
+            </section>
+
+            <section id="testimonials">
+                <h2 class="section-title">What People are Saying</h2>
+                <div class="testimonials-container">
+                    <div class="testimonial">
+                        <p>"Kitty-Kun has transformed my relationship with my cat! I understand him so much better."</p>
+                        <span class="testimonial-author">- Rohan P.</span>
+                    </div>
+                    <div class="testimonial">
+                        <p>"The resources on this site are top-notch.  My cat is happier and healthier thanks to you."</p>
+                        <span class="testimonial-author">- Saurab D.</span> 
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <h2 class="section-title">About Us</h2>
+                <p>Our mission at Kitty-Kun is to help you build a strong and loving bond with your feline friend. We provide resources, tips, and a supportive community for cat owners everywhere. </p> 
+                <div id="cat-video-div">
+                    <video controls id="cat-video"> 
+                        <source src="videos/cat-video.mp4" type="video/mp4">
+                        <source src="videos/cat-video.mov" type="video/mov">
+                        <source src="videos/cat-video.ogv" type="video/ogv">
+                    </video>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 Nichole Bernas 300389212</p>
+                ChatGPT. (n.d.). [Images generated using ChatGPT]. OpenAI.<br>
+                Aww Animals. (2023, April 10). Baby cats - Cute and funny cat videos compilation #21 [Video]. YouTube. https://www.youtube.com/watch?v=cytJLvf-eVs&t=95s&ab_channel=AwwAnimals
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

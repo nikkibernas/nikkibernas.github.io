@@ -1,0 +1,995 @@
+
+
+/*///////////////////////////////////////////// Home page CSS //////////////////////////////////////////*/
+
+body{
+    background-image: url(images/background-blossoms.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.wrapper {
+    min-height: 100vh;
+    overflow: auto;
+    background: linear-gradient(to right, rgba(213, 255, 254, 0.547), rgba(255, 217, 233, 0.633), rgba(213, 255, 254, 0.547));
+}
+
+main{
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 100vh;
+}
+
+.header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(255, 209, 222);
+    background-image: url(images/branch.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    border: 2px solid black;
+    box-shadow: 0px 0px 7px 20px rgba(96, 178, 202, 0.5); 
+}
+
+#catlogo{
+    height: 150px;
+    width: 150px;
+}
+
+nav{
+    display: flex;
+    padding-left: 2%;
+    
+}
+nav a{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 2em;
+    border: 2px solid black;
+    padding: 2px;
+    margin: 2px;
+    background-color: rgb(255, 241, 236);  
+}
+.navA{
+    transition: 0.6s;
+    
+}
+.navA:hover{
+    color: rgb(20, 149, 205);
+    transition: 0.6s;
+    font-size: 2.2em;
+
+}
+
+
+
+/* Hero section styling */
+#hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: rgba(213, 255, 254, 0.547); 
+    margin-top: 40px;
+}
+.hero-content {
+    text-align: center;
+    width: 100%;
+}
+.hero-btn {
+    background-color: rgb(255, 209, 222);
+    border: 2px solid black;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;     
+}
+.hero-btn:hover{
+    background-color:rgb(255, 227, 249);
+}
+#hero-img {
+   width: 20%;
+}
+
+
+
+/* highlights styling */
+#highlights{
+    margin-top: 5%;
+}
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+}
+ 
+.feature {
+    text-align: center;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: rgba(208, 246, 255, 0.701); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+ 
+
+
+/* adorable cat moments styling */
+#carousel{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.carousel-container {
+    position: relative;    
+    overflow: hidden;      
+    width: 60%; 
+    height: 400px; 
+    margin: 20px auto;    
+}
+.carousel-slide img {
+    width: 100%;  
+    display: block;
+    margin-bottom: 20px;
+
+}
+.carousel-slide {
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.section-title{
+    font-size: 2em;
+    text-align: center;
+}
+#slideshow{
+    height: 395px;
+    width: auto;
+}
+
+
+
+/* Testimonials styling */
+.testimonials-container {
+    display: flex; 
+    margin: 40px;
+}
+.testimonial {
+    background-color: rgb(255, 248, 239); 
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin: 10px;
+}
+.testimonial-author {
+    font-style: italic;
+}
+
+
+/* About us styling */
+#about {
+    background-color: rgba(208, 246, 255, 0.701);
+    text-align: center;
+}
+
+
+
+#cat-video-div {
+    border: none; 
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+#cat-video{
+    box-shadow: 0px 0px 15px 15px rgb(255, 210, 223);
+    border: 2px solid black;
+    height: 300px;
+    width: auto;
+}
+
+
+
+/* footer styling */
+footer {
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(0, 0, 0); 
+    font-size: 1em;
+    border: 2px solid black;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: rgb(255, 241, 236);
+    position: relative; 
+    left: 0; 
+    right: 0; 
+    box-sizing: border-box;
+}
+.footer-content {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(255, 209, 222);
+    color: white;
+}
+
+
+
+
+
+/*//////////////////////////////////////////////////////// Learn page CSS /////////////////////////////////////////////////////////////*/
+
+/* hero section styling */
+#learn{
+    text-align: center;
+}
+#learning-center{
+    font-size: 3em;
+}
+.flower-span{
+    color: rgb(255, 209, 222);
+}
+
+
+/* flash cards styling */
+#hover-h2{
+    font-size: 1.9em;
+}
+.flipCards-div{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.flipCards{
+    height: 160px;   
+    box-shadow: 0px 0px 15px 15px rgb(255, 210, 223);
+    border: 2px solid black;
+    transition: 0.6s;
+}
+.flipCards:hover{
+    transition: 0.6s;
+    height: 165px;
+}
+
+
+/* Select a question styling */
+.select-question-h2{
+    display: flex;
+    justify-content: center;
+}
+#select-a-question{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 248, 239);
+    padding: 2%;
+    border: 2px solid black;
+    margin-top: 50px;
+}
+#questions-form{
+    text-align: center;
+}
+#question-answers{
+    padding: 2%;
+    align-items: center;
+}
+
+#cat-stretch-img{
+    height: 150px;
+}
+
+
+/* forms divs styling */
+#learn-forms-div{
+    display: flex;
+}
+
+
+/* cat cost calculator styling */
+#costCalculator{
+    background-color: rgba(208, 246, 255, 0.701);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    width: 48%;
+}
+.dollar{
+    color: green;
+    font-weight: bold;
+}
+#h1Exp{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+    font-size: 1.7em;
+}
+
+#amount-of-cats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+#amount{
+    width: 10%;
+}
+#amount-label{
+    width: 100%
+}
+
+#expensive-or-not{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+.petCosts{
+    width: 100%;
+}
+
+#buttons-costs{
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+    background-color: rgb(255, 209, 222);
+    background-image: url(images/branch.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 15px;
+    border: 2px solid black;
+}
+
+#results-h3{
+    margin-left: 20px;
+    margin-bottom: 0px;
+}
+#para-results-div{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+#para{
+    background-color: rgb(255, 248, 239);
+    border: 2px solid black;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: 0px;
+    width: 100%;
+}
+#cat-tree-img{
+    height: 150px;
+}
+
+
+/* cat quiz styling */
+#quiz{
+    background-color: rgba(208, 246, 255, 0.701);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+    width: 48%;
+}
+
+#try-quiz-h1{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+    font-size: 1.7em;
+    padding-bottom: 5%;
+}
+.pencil{
+    color: rgb(180, 124, 61);
+    font-weight: bold;
+}
+
+#quiz-content-div{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 209, 222);
+    background-image: url(images/branch.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    padding: 15px;
+    border: 2px solid black;
+}
+#quiz-results-div{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+#quiz-results-para{
+    background-color: rgb(255, 248, 239);
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+    width: 90%;
+}
+#results-h3-quiz{
+    width: 100%;
+    padding-top: 5%;
+}
+
+#start-quiz-btn {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* amazing cat facts video */
+#cat-fact-video-div {
+    border: none; 
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+#cat-fact-video{
+    box-shadow: 0px 0px 15px 15px rgb(255, 210, 223);
+    border: 2px solid black;
+}
+
+
+
+
+/* /////////////////////////////////////////////////// Relax page CSS ////////////////////////////////////////////////////// */
+
+#wrapper-relax{
+    min-height: 100vh;
+    overflow: auto;
+    background: linear-gradient(to right, rgba(213, 255, 254, 0.547), rgba(255, 238, 199, 0.549), rgba(213, 255, 254, 0.547));
+}
+#main-relax{
+    padding: 0px;
+    min-height: 100vh;
+}
+
+
+/* relax hero section styling */
+#relax-hero-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+#relax-page-h1{
+    font-size: 2.7em;
+    width: 100%;
+}
+.sun-span{
+    color: rgb(255, 247, 174);
+    font-weight: bold;
+    font-size: 2em;
+}
+#relax-page-h2{
+    font-size: 2em;
+}
+
+
+/* relaxing music styling */
+#cat-music-div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+}
+#cat-music-h3{
+    font-size: 1.6em;
+    font-weight: lighter;
+    width: 100%;
+    text-align: center;
+}
+
+
+/* interactive cats div styling */
+#all-cat-features-div{
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, rgba(255, 240, 217, 0.98), rgba(255, 255, 255, 0.944), rgba(255, 240, 217, 0.98));
+    border: 2px solid black;
+    margin: 0px;
+}
+
+
+/* cat name generator styling */
+#cat-name-generator {
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.936), rgb(255, 209, 222), rgba(255, 255, 255, 0.9));
+    padding: 20px;
+    border: 2px solid black;
+    margin: 20px auto;
+    width: 500px; 
+    text-align: center;
+}
+#generated-name {
+    margin-top: 15px;
+    font-size: 1.5em; 
+    font-weight: bold;
+}
+
+
+/* fat cat styling */
+#fat-cat-div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+#fat-cat-img{
+    height: 250px;
+    margin-left: 5%;
+}
+#fat-cat-h2{
+    font-size: 2em;
+}
+
+
+/* color change cat styling */
+#sleepy-kitty-div{
+    display: flex;
+    margin: 0px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+#sleeping-kitty{
+    height: 250px;
+    border: 2px solid black;
+    background-color: #ffcd98;
+    box-shadow: 0px 0px 10px 10px rgb(255, 209, 222);
+    margin-right: 5%;
+}
+#sleepy-kitty-h2{
+    font-size: 2em;
+    padding: 5px;
+    background-color: white;
+    border: 2px solid black;
+    margin: 5%;
+}
+
+
+/* sound cat styling */
+#loud-cat-div{
+    margin-top: 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+#blueberry-cat{
+    height: 250px;
+}
+#loud-cat-h1{
+    font-size: 2.5em;
+    width: 100%;
+}
+
+
+
+
+/*/////////////////////////////////////////////////////// Feedback page CSS /////////////////////////////////////////////////////////*/
+
+
+/* Feedback Form Styles */
+#feedback-container {
+    background-color: rgba(208, 246, 255, 0.701);
+    padding: 20px;
+    border: 2px solid black;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.3);
+}
+#feedback-container h1 {
+    text-align: center;
+}
+
+/* star rating styles */
+.rating {
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    margin-bottom: 15px;
+}
+.rating input{
+    display: none;
+}
+.rating label {
+    font-size: 2em;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.rating label:hover,
+.rating label:hover ~ label,
+.rating input[type="radio"]:checked ~ label {
+    color: gold;
+}
+
+
+/* text areas styling */
+textarea {
+    width: 95%; 
+    height: 125px;
+    border: 2px solid black;
+    padding: 10px;
+    margin-bottom: 15px;
+    resize: vertical;
+}
+
+
+/* submit button styling */
+#submit-feedback {
+    background-color: rgb(255, 209, 222);
+    border: 2px solid black;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+#submit-feedback:hover{
+    background-color:rgb(255, 227, 249);
+}
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+/*//////////////////////////////////////////////// styling for tablet screen size ///////////////////////////////////////////////////*/
+
+@media screen and (max-width: 1024px) {
+    
+    /*/////////////////////////// home page 1024px //////////////////////////////*/
+    nav{
+        display: flex;
+        padding-left: 2%;
+        
+    }
+    nav a{
+        font-size: 1.5em;
+        border: 2px solid black;
+        padding: 2px;
+        margin: 2px;
+    }
+    .navA:hover{
+        font-size: 1.65em;
+    }
+
+    /* slideshow */
+    #slideshow{
+        height: 280px;
+        width: auto;
+    }
+    #carousel{
+        margin-bottom: 0px;
+    }
+    #testimonials{
+        margin: 0px;
+    }
+
+
+    /*//////////////////////////// learn page 1024px ////////////////////////////*/
+    #learning-center{
+        font-size: 2.5em;
+    }
+    #hover-h2{
+        font-size: 1.4em;
+    }
+
+
+    /* flash cards */
+    .flipCards{
+        margin-top: 13px;
+    }
+    .flipCards-div{
+        flex-wrap: wrap;
+    }
+
+
+    /* select a question */
+    .select-question-h2{
+        justify-content: center;
+        width: 100%;
+    }
+    .arrow{
+        color: rgb(255, 248, 239);
+    }
+    #question-h2-div{
+        width: 100%;
+    }
+    #select-a-question{
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #cat-stretch-img{
+        height: 150px;
+    }
+
+
+    /* cat costs calculator */
+    #h1Exp{
+        font-size: 1.8em;
+    }
+    
+    #learn-forms-div{
+        flex-wrap: wrap;
+    }
+    #costCalculator{
+        width: 100%;
+    } 
+    #cat-tree-img{
+        height: 200px;
+        margin-left: 10px;
+    }
+
+
+   /* cat quiz */
+    #quiz{
+        width: 100%;
+    }
+    #berry-cat-img{
+        height: 150px;
+    }
+
+
+    /* //////////////////////////////// Relax page 1024px /////////////////////////////*/
+    /* hero */
+    #relax-intro-div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    #relax-page-h1{
+        font-size: 2.1em;
+        width: 100%;
+    }
+    #relax-page-h2{
+        font-size: 1.6em;
+    }
+    
+
+    /* cat music */
+    #cat-music-div{
+        margin: 0px;
+    }
+    #cat-music-h3{
+        font-size: 1.4em;
+    }
+    #cat-music-audio{
+        margin: 0;
+    }
+
+
+    /* fat cat */
+    #fat-cat-img{
+        height: 200px;
+    
+    }
+    #fat-cat-h2{
+        font-size: 1.6em;
+    }
+    
+
+    /* color changing cat */
+    #sleeping-kitty{
+        height: 200px;
+    }
+    #sleepy-kitty-h2{
+        font-size: 1.6em;
+    }
+
+
+    /* sound cat */
+    #blueberry-cat{
+        height: 200px;
+    }
+    #loud-cat-h1{
+        font-size: 1.6em;
+    }
+}
+
+
+
+
+/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+
+
+
+/*//////////////////////////////////////////////// styling for phone screen size ///////////////////////////////////////////////////*/
+
+
+@media screen and (max-width: 768px) {
+   
+    /*//////////////////////////////// home page 768px ////////////////////////////////*/
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+        text-align: center;
+        padding-left: 5%;
+    }
+    .navA:hover{
+        font-size: 1.6em;
+    }
+
+    #catlogo{
+        height: 160px;
+        width: 160px;
+    }
+
+
+    /* slideshow */
+    #slideshow{
+        height: 200px;
+        width: auto;
+    }
+
+
+    /* cat video */
+    #cat-video{
+        height: 200px;
+    }
+
+
+    /*/////////////////////////////// learn page 768px //////////////////////////////////*/
+    /* hero */
+    #learning-center{
+        font-size: 2em;
+    }
+    #hover-h2{
+        font-size: 1em;
+    }
+
+
+    /* flash cards */
+    .flipCards{
+        height: 180px;
+        margin: 20px;
+    }
+    .flipCards-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .flipCards:hover{
+        height: 185px;
+    }
+
+
+    /* select a question */
+    #questions-form{
+        width: 100%;
+    }
+    #cat-stretch-img{
+        height: 100px;
+        margin-top: 20px;
+    }
+
+
+    /* cat costs calculator */
+    #amount-of-cats{
+        margin: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #expensive-or-not{
+        margin: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    #buttons-costs{
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #results-h3{
+        margin-left: 0px;
+        text-align: center;
+    }
+    #para-results-div{
+        justify-content: center;
+        margin-bottom: 2%;
+    }
+    #para{
+        padding: 10px;
+        margin: 0;
+    }
+    #cat-tree-img{
+        display: none;
+    }
+
+
+
+    /*/////////////////////////////////// Relax page 768px /////////////////////////////////////*/
+    /* hero */
+    #relax-intro-div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        text-align: center;
+    }
+    #relax-page-h1{
+        font-size: 1.3em;
+        width: 100%;
+    }
+    #relax-page-h2{
+        font-size: 1em;
+    }
+
+
+    /* cat music */
+    #cat-music-div{
+        flex-wrap: wrap;
+    }
+    #cat-music-h3{
+        font-size: 1em;
+    }
+    #span-arrow{
+        display: none;
+    }
+
+
+    /* fat cat */
+    #fat-cat-img{
+        height: 150px;
+    
+    }
+    #fat-cat-h2{
+        font-size: 1.3em;
+    }
+    
+
+    /* color changing cat */
+    #sleeping-kitty{
+        height: 150px;
+    }
+    #sleepy-kitty-h2{
+        font-size: 1.3em;
+    }
+
+
+    /* sound cat */
+    #blueberry-cat{
+        height: 150px;
+    }
+    #loud-cat-h1{
+        font-size: 1.3em;
+    }
+
+
+    /*///////////////////////////////////// Feedback page 768 ////////////////////////////////*/
+    #feedback-container {
+        max-width: 90%;
+    }
+
+}

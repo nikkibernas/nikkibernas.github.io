@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <script src="scripts/learn.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header">
+                <img src="images/logo.jpg" alt="logo"
+                onmouseenter="this.src='images/logo-mad.jpg' "
+                onmouseout="this.src='images/logo.jpg'" id="catlogo">
+                <nav>
+                    <a class="navA" href="home.html">
+                        Home
+                    </a>
+                    <a class="navA" href="#">
+                        Learn
+                    </a>
+                    <a class="navA" href="relax.html">
+                        Relax
+                    </a>
+                    <a class="navA" href="feedback.html">
+                        Feedback
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div id="learn">
+                <h1 id="learning-center"><span class="flower-span">&#10048;</span> Learning center <span class="flower-span">&#10048;</span></h1>
+                <h2 id="hover-h2">Hover over a card to see the answers to common misconceptions:</h2>
+            </div><br>
+            
+            <div class="flipCards-div">
+                <img src="images/flash-cards/train-cats.png" class="flipCards" alt="Training Cats Card"
+                onmouseover="this.src='images/flash-cards/train-cats-answer.png'" 
+                onmouseout="this.src='images/flash-cards/train-cats.png'">
+
+                <img src="images/flash-cards/cats-love.png" class="flipCards" alt="Cats Love Card"
+                onmouseover="this.src='images/flash-cards/cats-love-answer.png'" 
+                onmouseout="this.src='images/flash-cards/cats-love.png'">
+
+                <img src="images/flash-cards/hate-dogs.png" class="flipCards" alt="Cats and Dogs Card"
+                onmouseover="this.src='images/flash-cards/hate-dogs-answer.png'" 
+                onmouseout="this.src='images/flash-cards/hate-dogs.png'">
+            </div><br>
+            
+            <div id="select-a-question">
+                <div id="question-h2-div">
+                    <h2 class="select-question-h2">Select a question <span class="arrow">&#8674;</span><br></h2>
+                    <h2 class="select-question-h2">To see the answer <span class="arrow">&#8674;</span></h2>
+                </div>
+                <form id="questions-form">
+                    <select name="questions" id="questions" multiple="multiple" onchange="choiceFunc()">
+                        <option>What's the best diet for a cat?</option>
+                        <option>Should I let my cat go outside?</option>
+                        <option>Why does my cat scratch me?</option>
+                        <option>Where should I pet a cat?</option>
+                    </select>
+                    <textarea id="question-answers" cols="25" rows="4" readonly></textarea>
+                </form>
+                <img src="images/cat-stretch.png" alt="Stretching Cat" id="cat-stretch-img">
+            </div><br>
+
+            
+            <div id="learn-forms-div">
+
+                <!-- cat costs calculator section -->
+                <fieldset id="costCalculator">
+                    <div>
+                        <h1 id="h1Exp"><span class="dollar">&dollar;</span> Cats can be expensive <span class="dollar">&dollar;</span><br>See how much your cats may cost you each month:</h1>
+                        <div id="amount-of-cats">
+                            <label for="amount" class="amount">How many cats do you want / or have?</label>
+                            <input name="amount" id="amount" type="number">
+                        </div>
+    
+                        <div id="expensive-or-not">
+                            <label class="petCosts">Will you buy the most expensive food and toys?</label><br>
+                            <fieldset class="optGroup">
+                                <label for="eYes">Yes</label>
+                                <input name="expensive" id="eYes" value="yes" type="radio">
+                                <label for="eNo">No</label>
+                                <input name="expensive" id="eNo" value="no" type="radio">
+                            </fieldset>
+                        </div>
+    
+                        <div id="buttons-costs">
+                            <button type="submit" onclick="calculateCost()">Press to see results</button>
+                            <button type="button" onclick="resetCost()">Reset</button>
+                        </div>
+    
+                        <h3 id="results-h3-costs">Results:</h3>
+                        <div id="para-results-div">
+                            <p id="para">Costs will include food, litter, toys and a one time adoption fee. <br><br>
+                                Adoption fee per cat: $300 <br><br>
+                                Regular: $15/mo for food, $20/mo cat litter, $3/mo for toys<br>
+                                Expensive: $30/mo for food, $40/mo cat litter, $6/mo for toys
+                            </p>
+                            <img src="images/cat-under-tree.png" alt="Cat under a tree" id="cat-tree-img">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- cat quiz section -->
+                <fieldset id="quiz">
+                    <div>
+                        <h1 id="try-quiz-h1"><span class="pencil">&#9998;</span> Try our cat quiz! <span class="pencil">&#9998;</span><br>See how much you know about cats:</h1>
+    
+                        <button id="start-quiz-btn">Take Quiz</button>
+    
+                        <form id="quiz-form">
+                            <p id="question-para"></p>
+                            <div id="quiz-content-div">
+                                <p>Click "Take Quiz" to begin the quiz!</p>
+                            </div>
+                            <button id="next-question-btn" type="button" style="display: none;">Next Question</button>
+                            <button id="submit-quiz-btn" type="button" style="display: none;">Submit</button>
+                            <button id="reset-quiz-btn" style="display: none;">Reset Quiz</button>
+                        </form>
+                        
+                        <h3 id="results-h3-quiz">Results: </h3>
+                        <div id="quiz-results">
+                            <div>
+                                <p id="quiz-results-para">Your final score will be shown here. <br><br> The correct answers will be shown here.</p>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                
+            </div>
+            <section id="about">
+                <h2 class="section-title">Amazing Cat Facts Video</h2>
+                <div id="cat-fact-video-div">
+                    <iframe id="cat-fact-video" width="448" height="252" src="https://www.youtube.com/embed/pKiJhbqT5LI?si=LIt4maWjZCES1Gcy" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Nichole Bernas 300389212</p>
+            ChatGPT. (n.d.). [Images generated using ChatGPT]. OpenAI.<br>  
+            Care.com. (n.d.). Amazing Cat Facts [Video]. YouTube. https://www.youtube.com/watch?v=pKiJhbqT5LI&ab_channel=Care.com
+        </div>
+    </footer>
+</body>
+</html>

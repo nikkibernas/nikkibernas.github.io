@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relax</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <script src="scripts/relax.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="wrapper-relax">
+        <header>
+            <div class="header">
+                <img src="images/logo.jpg" alt="logo"
+                onmouseenter="this.src='images/logo-mad.jpg' "
+                onmouseout="this.src='images/logo.jpg'" id="catlogo">
+                <nav>
+                    <a class="navA" href="home.html">
+                        Home
+                    </a>
+                    <a class="navA" href="learn.html">
+                        Learn
+                    </a>
+                    <a class="navA" href="#">
+                        Relax
+                    </a>
+                    <a class="navA" href="feedback.html">
+                        Feedback
+                    </a>
+                </nav>
+            </div>
+        </header>
+        <main id="main-relax">
+
+            <div id="relax-hero-div">
+                <h1 id="relax-page-h1"><span class="sun-span">&#9728;</span> Lets take a moment to relax our brains <span class="sun-span">&#9728;</span></h1>
+                <h2 id="relax-page-h2">&#8675;  In this interactive kitty-cat section  &#8675;</h2>
+            </div><br>
+
+            <div id="cat-music-div">
+                <h3 id="cat-music-h3">Feel free to listen along to cat relaxation sounds</h3>
+                <audio controls id="cat-music-audio"> 
+                    <source src="sounds/relaxing-cat-music/cat-music.mp3" type="audio/mp3">
+                    <source src="sounds/relaxing-cat-music/cat-music.wav" type="audio/wav">
+                    <source src="sounds/relaxing-cat-music/cat-music.m4a" type="audio/m4a">
+                </audio>
+            </div>
+
+
+            <div id="all-cat-features-div">
+
+                 <div id="cat-name-generator">
+                    <h2>Cat Name Generator</h2>
+                    <form id="name-generator-form">
+                        <label for="adjective">Enter any adjective:</label>
+                        <input type="text" id="adjective" required> 
+                        <br>
+                        <label for="food-color">Enter food or color:</label>
+                        <input type="text" id="food-color" required>
+                        <br><br>
+                        <button type="button" id="generate-name" onclick="catNameGenerator()">Generate Name</button>
+                    </form>
+                    <div id="generated-name"> Name will appear here</div>
+                </div>
+    
+                <div id="fat-cat-div">
+                    <img src="images/cat.png" alt="cat that turns fat on hover" id="fat-cat-img" 
+                    onmouseover="this.src='images/cat-fat.png'"
+                    onmouseout="this.src='images/cat.png'">
+                    <h2 id="fat-cat-h2" >&#8672; hover the cat to make him fat</h2>
+                </div>
+    
+                <div id="sleepy-kitty-div">
+                    <h2 id="sleepy-kitty-h2">Click the cat 1, or 2 times<br><br>To change it's color</h2>
+                    <img src="images/sleeping-kitty.png" alt= "sleeping kitty that changes color on click" onclick="colorChange()" ondblclick="colorChange2()" id="sleeping-kitty">
+                </div>
+    
+                <div id="loud-cat-div">
+                    <h1 id="loud-cat-h1">&#8675; Press this kitty to hear a meow &#8675;</h1>
+                    <figure>
+                        <a onclick="snd.play('meow.mp3')"> <img src="images/blueberry-cat.png" alt= "cat eating blueberries" id="blueberry-cat"> </a>
+                        <script>
+                            var snd = new Audio("/sounds/cat-meow/meow.mp3"); 
+                        </script>
+                        <figcaption>Blueberry cat</figcaption>
+                    </figure>
+                </div>
+
+
+            </div>
+
+        </main>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Nichole Bernas 300389212</p>
+            ChatGPT. (n.d.). [Images generated using ChatGPT]. OpenAI.<br>
+            nBeats. (n.d.). Cat relaxing music [Video]. YouTube. https://www.youtube.com/watch?v=p7dGjPxMyEc&ab_channel=nBeats<br>
+            SoundBytes. (n.d.). Cat meow sound [Video]. YouTube. https://www.youtube.com/watch?v=rEr9gX4fGms&ab_channel=SoundBytes
+        </div>
+    </footer>
+</body>
+</html>

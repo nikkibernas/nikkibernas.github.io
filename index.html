@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,38 +8,68 @@
   <link rel="stylesheet" href="styles.css">
   <link href='https://fonts.googleapis.com/css?family=Staatliches' rel='stylesheet'>
 </head>
+
 <body>
   <!-- Fixed background elements -->
   <div class="fixed-elements">
+    <div class="unicorn-bg" data-us-project="EdURCaiMRxEwDoJwYVoV"></div>
     <div class="scroll-overlay"></div>
     <h1 id="background-title">N!KK!</h1>
   </div>
+
+  <!-- UnicornStudio Library -->
+  <script type="text/javascript">
+    !function () { if (!window.UnicornStudio) { window.UnicornStudio = { isInitialized: !1 }; var i = document.createElement("script"); i.src = "https://cdn.jsdelivr.net/gh/hiunicornstudio/unicornstudio.js@v2.0.1/dist/unicornStudio.umd.js", i.onload = function () { window.UnicornStudio.isInitialized || (UnicornStudio.init(), window.UnicornStudio.isInitialized = !0) }, (document.head || document.body).appendChild(i) } }();
+  </script>
 
   <!-- Scrollable content wrapper -->
   <div class="scroll-container">
     <header>
       <div class="nav-left">
-        <a href="#" class="nav-link">Music</a>
-        <a href="#" class="nav-link">About</a>
-        <a href="#" class="nav-link"></a>
+        <a href="#music-section" class="nav-link">Music</a>
+        <a href="#projects-section" class="nav-link">Projects</a>
       </div>
       <div class="nav-right">
-        <a href="https://www.spotify.com" target="_blank" class="social-link">Spotify</a>
-        <a href="https://www.youtube.com" target="_blank" class="social-link">YouTube Music</a>
-        <a href="https://www.instagram.com/nikki.cb/" target="_blank" class="social-link">Instagram</a>
       </div>
     </header>
 
     <div id="content">
-      <section class="snap-section">
-        <h2>Latest Tracks</h2>
-        <p>I THINK YOU'RE IN LOVE?</p>
-        <p>YOU & I</p>
-        <iframe style="border-radius:5px" src="https://open.spotify.com/embed/track/4zKicm2e27YyCPMpiVGmZk?utm_source=generator&theme=0" width="20%" height="150" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      <section id="music-section" class="snap-section">
+        <button id="scroll-indicator" type="button">↓</button>
+        <h2 id="music-title">Music</h2>
+        <p class="stream-text">stream my music on</p>
+        <div class="music-links">
+          <a href="https://open.spotify.com/artist/2cEiTB7fHtY7G3VTFiNZHB?si=8GEKlKc_S7COKCBtGO9vJg" target="_blank"
+            class="social-link">Spotify</a>
+          <a href="https://music.youtube.com/channel/UCo5m8Arf2qdGWTmAoctgk1A?si=xDeCAhPjEkbCoUNM" target="_blank"
+            class="social-link">YouTube Music</a>
+        </div>
+        <div class="tracks-container">
+          <div class="track-item">
+            <p>I THINK YOU'RE IN LOVE?</p>
+            <iframe data-testid="embed-iframe" style="border-radius:5px"
+              src="https://open.spotify.com/embed/album/37rmShvR1s0vAysA1TkxGM?utm_source=generator" width="100%"
+              height="150" frameBorder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+          </div>
+          <div class="track-item">
+            <p>YOU & I</p>
+            <iframe style="border-radius:5px"
+              src="https://open.spotify.com/embed/track/4zKicm2e27YyCPMpiVGmZk?utm_source=generator&theme=0"
+              width="100%" height="150" frameBorder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"></iframe>
+          </div>
+        </div>
+        <button id="scroll-to-projects" class="scroll-arrow-btn" type="button">↓</button>
       </section>
-      <section class="snap-section">
-        <h2>brought to you by</h2>
-        <p>a questionably autistic Canadian</p>
+      <section id="projects-section" class="snap-section">
+        <h2 id="projects-title">Projects</h2>
+        <div class="project-categories">
+          <h3 class="category-title">App & Web</h3>
+          <h3 class="category-title">Games</h3>
+        </div>
       </section>
       <section class="snap-section">
         <h2>More Features</h2>
@@ -49,4 +80,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

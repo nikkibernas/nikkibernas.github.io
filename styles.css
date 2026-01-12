@@ -1,149 +1,334 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Header Styles */
+body {
+  /* font-family: Arial, sans-serif; */
+  font-family: 'Staatliches';
+  background: none;
+  /* Remove background from body */
+  color: white;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+  /* Prevents bounce scroll */
+}
+
+header {
+  position: relative;
+  /* Non-fixed, scrolls with the page */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: none;
+  z-index: 1000;
+  top: 1rem;
+  font-size: 2.5rem;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link,
+.social-link {
+  text-decoration: none;
+  color: rgb(71, 32, 33);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.social-link:hover {
+  color: #ff4d4d;
+}
+
+/* UnicornStudio Background */
+.unicorn-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* H1 Background Layer */
+#background-title {
+  position: fixed;
+  top: 47%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Adjust centering */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 9rem;
+  /* Adjust font size */
+  letter-spacing: 4rem;
+  color: rgb(255, 226, 199);
+  z-index: 1;
+  /* Layer behind overlay but above background */
+  pointer-events: none;
+  /* Ignore pointer events */
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  /* Added opacity transition */
+}
+
+/* Content Sections */
+#content {
+  margin-top: 60vh;
+  z-index: 4;
+  /* Higher than overlay */
+  position: relative;
+}
+
+.snap-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  scroll-snap-align: start;
+  padding: 2rem;
+  color: white;
+  position: relative;
+}
+
+/* Projects section - positioned higher */
+#projects-section {
+  min-height: 50vh;
+  justify-content: flex-start;
+  padding-top: 10vh;
+  margin-top: -10vh;
+}
+
+#projects-title {
+  font-size: 6rem;
+  color: rgb(255, 226, 199);
+}
+
+.project-categories {
+  display: flex;
+  gap: 6rem;
+  margin-top: 2rem;
+}
+
+.category-title {
+  font-size: 2.5rem;
+  color: rgb(255, 226, 199);
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Scroll arrow button base styles */
+.scroll-arrow-btn,
+#scroll-indicator {
+  font-size: 3rem;
+  font-family: inherit;
+  background: none;
+  border: none;
+  color: rgb(255, 226, 199);
+  cursor: pointer;
+  animation: pulse-arrow 1.5s ease-in-out infinite;
+  transition: opacity 0.3s ease-out;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.scroll-arrow-btn:hover,
+#scroll-indicator:hover {
+  animation: none;
+  transform: scale(1.15);
+}
+
+#scroll-indicator.scrolled {
+  animation: none;
+  pointer-events: none;
+}
+
+/* Second arrow at bottom of music section */
+#scroll-to-projects {
+  margin-top: 4rem;
+  margin-bottom: 0;
+}
+
+@keyframes pulse-arrow {
+
+  0%,
+  100% {
+    transform: scale(1.15);
   }
-  
-  /* Body and Header Styles */
-  body {
-    /* font-family: Arial, sans-serif; */
-    font-family: 'Staatliches';
-    background: none; /* Remove background from body */
-    color: white;
-    overflow-x: hidden;
-    scroll-snap-type: y mandatory;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-    overscroll-behavior: none; /* Prevents bounce scroll */
+
+  50% {
+    transform: scale(1);
   }
-  
-  header {
-    position: relative; /* Non-fixed, scrolls with the page */
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background: none;
-    z-index: 1000;
-    top: 1rem;
-    font-size: 1.3rem;
+}
+
+/* Music section title - fades and slides in on scroll */
+#music-title {
+  font-size: 6rem;
+  opacity: 0;
+  color: rgb(255, 226, 199);
+  transform: translateY(50px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+#music-title.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stream-text {
+  font-size: 1.2rem;
+  opacity: 0;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+  transition: opacity 0.4s ease-out;
+}
+
+.music-links {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
+}
+
+.music-links .social-link {
+  color: rgb(255, 226, 199);
+  font-size: 1.3rem;
+}
+
+/* Staggered pulsating animation for music links */
+.music-links .social-link:nth-child(1) {
+  animation: link-pulse 3s ease-in-out infinite;
+}
+
+.music-links .social-link:nth-child(2) {
+  animation: link-pulse 3s ease-in-out infinite 1.5s;
+}
+
+@keyframes link-pulse {
+
+  0%,
+  40%,
+  100% {
+    transform: scale(1);
   }
-  
-  .nav-left, .nav-right {
-    display: flex;
-    gap: 1.5rem;
+
+  20% {
+    transform: scale(1.05);
   }
-  
-  .nav-link, .social-link {
-    text-decoration: none;
-    color: rgb(19, 7, 7);
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  .nav-link:hover, .social-link:hover {
-    color: #ff4d4d;
-  }
-  
-  /* H1 Background Layer */
-  #background-title {
-    position: fixed;
-    top: 43%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust centering */
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 14rem; /* Adjust font size */
-    letter-spacing: 3rem;
-    color: rgb(255, 255, 255); 
-    z-index: 1; /* Layer behind overlay but above background */
-    pointer-events: none; /* Ignore pointer events */
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out; /* Added opacity transition */
-  }
-  
-  /* Content Sections */
-  #content {
-    margin-top: 60vh;
-    z-index: 4; /* Higher than overlay */
-    position: relative;
-  }
-  
-  .snap-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    scroll-snap-align: start;
-    padding: 2rem;
-    color: white;
-    position: relative;
-  }
-  
-  h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  
-  /* Scroll Overlay */
-  .scroll-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(216, 63, 49, 0.804); /* CE4432 with 95% opacity */
-    pointer-events: none;
-    opacity: 0; /* Start fully transparent */
-    z-index: 3; /* Above content and H1 */
-    transition: opacity 0.3s ease-out; /* Smooth transition */
-  }
-  
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: black; /* Or your preferred background color */
-    overscroll-behavior: none;
-  }
-  
-  .fixed-elements {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-  }
-  
-  .scroll-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    overscroll-behavior: auto; /* Enables bounce for content */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-  }
-  
-  /* Update background styles */
-  body {
-    background: none; /* Remove background from body */
-  }
-  
-  .fixed-elements {
-    background: url('images/bg.jpg') no-repeat center center fixed;
-    background-size: cover;
-  }
-  
-  /* Ensure other elements stay above fixed background */
-  header, #content {
-    position: relative;
-    z-index: 2;
-  }
-  
+}
+
+.music-links .social-link:hover {
+  color: rgb(71, 32, 33);
+  animation: none;
+  transform: scale(1.1);
+}
+
+/* Horizontal tracks container */
+.tracks-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 800px;
+}
+
+.track-item {
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+}
+
+.track-item p {
+  margin-bottom: 0.5rem;
+}
+
+/* Scroll Overlay */
+.scroll-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(216, 63, 49, 0.804);
+  /* CE4432 with 95% opacity */
+  pointer-events: none;
+  opacity: 0;
+  /* Start fully transparent */
+  z-index: 3;
+  /* Above content and H1 */
+  transition: opacity 0.3s ease-out;
+  /* Smooth transition */
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: black;
+  /* Or your preferred background color */
+  overscroll-behavior: none;
+}
+
+.fixed-elements {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.scroll-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: auto;
+  /* Enables bounce for content */
+  -webkit-overflow-scrolling: touch;
+  /* Smooth scrolling on iOS */
+}
+
+/* Update background styles */
+body {
+  background: none;
+  /* Remove background from body */
+}
+
+.fixed-elements {
+  background: url('images/bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Ensure other elements stay above fixed background */
+header,
+#content {
+  position: relative;
+  z-index: 2;
+}

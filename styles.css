@@ -120,15 +120,54 @@ header {
   color: rgb(255, 226, 199);
 }
 
-.project-categories {
+.projects-container {
   display: flex;
-  gap: 6rem;
+  width: 100%;
+  max-width: 1200px;
   margin-top: 2rem;
+  align-items: flex-start;
+}
+
+.project-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.project-divider {
+  width: 2px;
+  background-color: rgb(255, 226, 199);
+  align-self: stretch;
+  opacity: 0.5;
 }
 
 .category-title {
   font-size: 2.5rem;
   color: rgb(255, 226, 199);
+  margin-bottom: 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.project-box {
+  aspect-ratio: 1;
+  background-color: rgba(255, 226, 199, 0.1);
+  border: 1px solid rgba(255, 226, 199, 0.3);
+  border-radius: 8px;
+  min-height: 120px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.project-box:hover {
+  background-color: rgba(255, 226, 199, 0.2);
+  transform: scale(1.02);
 }
 
 h2 {
@@ -195,8 +234,9 @@ h2 {
 }
 
 .stream-text {
-  font-size: 1.2rem;
+  font-size: 2rem;
   opacity: 0;
+  color: rgb(71, 32, 33);
   margin-bottom: 0.5rem;
   letter-spacing: 0.1rem;
   transition: opacity 0.4s ease-out;
@@ -331,4 +371,195 @@ header,
 #content {
   position: relative;
   z-index: 2;
+}
+
+/* ==================== MOBILE RESPONSIVE STYLES ==================== */
+
+/* Tablet breakpoint */
+@media screen and (max-width: 1024px) {
+  header {
+    font-size: 1.8rem;
+    padding: 1rem;
+  }
+
+  .nav-left,
+  .nav-right {
+    gap: 1.5rem;
+  }
+
+  #background-title {
+    font-size: 6rem;
+    letter-spacing: 2rem;
+  }
+
+  #music-title,
+  #projects-title {
+    font-size: 4rem;
+  }
+
+  .category-title {
+    font-size: 2rem;
+  }
+
+  .projects-container {
+    max-width: 900px;
+  }
+
+  .project-column {
+    padding: 0 1rem;
+  }
+
+  .tracks-container {
+    width: 90%;
+  }
+
+  .track-item {
+    min-width: 200px;
+  }
+}
+
+/* Mobile breakpoint */
+@media screen and (max-width: 768px) {
+  header {
+    font-size: 1.5rem;
+    padding: 0.75rem 1rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .nav-left {
+    gap: 1.5rem;
+  }
+
+  .nav-right {
+    display: none;
+  }
+
+  #background-title {
+    font-size: 4rem;
+    letter-spacing: 1.5rem;
+  }
+
+  #content {
+    margin-top: 50vh;
+  }
+
+  #music-title,
+  #projects-title {
+    font-size: 3.5rem;
+  }
+
+  .stream-text {
+    font-size: 1.5rem;
+  }
+
+  .music-links {
+    gap: 1.5rem;
+  }
+
+  .music-links .social-link {
+    font-size: 1.1rem;
+  }
+
+  .tracks-container {
+    flex-direction: column;
+    width: 95%;
+    gap: 0;
+    align-items: center;
+  }
+
+  .track-item {
+    max-width: 100%;
+    min-width: unset;
+    width: 100%;
+    padding: 1rem 0 0.25rem 0;
+    border-bottom: 2px solid rgba(255, 226, 199, 0.5);
+  }
+
+  .track-item:first-child {
+    border-top: 2px solid rgba(255, 226, 199, 0.5);
+  }
+
+  .track-item iframe {
+    width: 100%;
+  }
+
+  /* Projects section mobile */
+  #projects-section {
+    padding-top: 5vh;
+  }
+
+  .projects-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .project-divider {
+    display: none;
+  }
+
+  .project-column {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .category-title {
+    font-size: 1.8rem;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .project-box {
+    min-height: 100px;
+  }
+
+  .scroll-arrow-btn,
+  #scroll-indicator {
+    font-size: 2.5rem;
+  }
+}
+
+/* Small mobile breakpoint */
+@media screen and (max-width: 480px) {
+  header {
+    font-size: 1.2rem;
+  }
+
+  .nav-left {
+    gap: 1rem;
+  }
+
+  #background-title {
+    font-size: 2.8rem;
+    letter-spacing: 1rem;
+  }
+
+  #music-title,
+  #projects-title {
+    font-size: 2.8rem;
+  }
+
+  .stream-text {
+    font-size: 1.2rem;
+  }
+
+  .music-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-box {
+    min-height: 80px;
+  }
 }
